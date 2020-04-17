@@ -6,11 +6,6 @@
     -moz-box-sizing: border-box;
 }
 
-html {
-    height: 100vh;
-    width: 100vw;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(71, 68, 68);
@@ -26,8 +21,18 @@ body {
     width: 1024px;
 }
 
+#logo {
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+}
+
+
 header {
-    height: 118px;
     text-align: center;
 }
 
@@ -45,6 +50,7 @@ header {
 nav {
     background-color:rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    margin-top: 4rem;
 }
 
 nav ul {
@@ -64,6 +70,7 @@ nav ul a {
     display: block;
     padding: 5px 10px;
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul a:hover {
@@ -71,9 +78,8 @@ nav ul a:hover {
 }
 
 main {
-    height: 400px;
     text-align: center;
-    padding: 5rem 12rem 0;
+    padding: 5rem 12rem 2rem;
 }
 
 .link-btn {
@@ -95,6 +101,57 @@ main {
     outline: none;
 }
 
-footer {
-    height: 100px;
+.map {
+    margin-top: 4rem;
+    text-align: center;
 }
+
+.map iframe {
+    border-radius: 1rem;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    margin-top: 4rem;
+    border-radius: 1rem;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.animate {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform: translateX(8rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo-animate {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translatex(-4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
